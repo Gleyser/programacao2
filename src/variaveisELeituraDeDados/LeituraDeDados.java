@@ -3,6 +3,10 @@ package variaveisELeituraDeDados;
 import java.util.Scanner;
 
 public class LeituraDeDados {
+	/*
+	 * Lembre-se: sempre que for necessário executar algo, você deverá colocar o código dentro de um método main
+	 * O método main é o método principal
+	 */
 	
 	public static void main(String[] args) {
 		// Inicializando o Scanner
