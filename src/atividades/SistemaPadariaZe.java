@@ -13,18 +13,17 @@ public class SistemaPadariaZe{
 		while (!opcaoDigitada.equals("S")){
 			switch (opcaoDigitada) {
 			case "C":				
-				// Falta código aqui. Complete!
-				// COMO FAZER? 
-				// Passo 1: leia o nome e o preço do teclado, usando os métodos lerProduto() e lerPrecoDoProduto()
-				// Passo 2: passe o nome e preço lido para o método CadastrandoProduto(String produto, Integer preco)
+				String nome = lerProduto();
+				Integer preco = lerPrecoDoProduto();
+				CadastrandoProduto(nome, preco);
 				System.out.println("Cadastrando...");
 				opcaoDigitada = lerOpcao();
 				break;
 				
 			case "V":
 				// O código aqui está completo, mas você precisa implementar o método venderProduto.
-				String produtoASerVendido = lerProduto();
-				venderProduto(produtoASerVendido);
+				String nomeDoProdutoASerVendido = lerProduto();
+				venderProduto(nomeDoProdutoASerVendido);
 				System.out.println("Vendendo...");
 				opcaoDigitada = lerOpcao();
 				break;
@@ -33,6 +32,8 @@ public class SistemaPadariaZe{
 				System.out.println("Todos os produtos cadastradoss são:");
 				// Aqui você imprime todos os elementos do array produtos.
 				// COMO FAZER? use o método toString() do array.
+				// Para imprimir a representação do ARRAY 
+				System.out.println(produtos.toString());
 				opcaoDigitada = lerOpcao();
 				break;
 				
@@ -47,16 +48,12 @@ public class SistemaPadariaZe{
 			}
 		}
 		
-	}
+	}	
 	
-	/* Esse método ler uma opção do teclado e retorna essa opcao. 
-	 * MUITO parecido com os exemplos das aulas anteriores.
-	 * COMO FAZER? Inicie uma string, leia do teclado e retorne essa string lida.
-	 */ 
 	private static String lerOpcao(){
 		System.out.println("Por favor, digite uma opção: C para cadastrar um produto, V para vender um produto, L para listar os produtos cadastrados e S para sair");
-		// aqui você adiciona o código que está faltando (leia o como fazer?)
-		return "S"; // essa linha será editada por você
+		String opcao = sc.next();
+		return opcao; 
 	}
 	
 	// Esse método adiciona imprime a mensagem de abertura do sistema. Já está feito pra vcs :)
@@ -64,24 +61,19 @@ public class SistemaPadariaZe{
 		System.out.println("=======** Seja bem vindo(a) ao sistema das padaria do Zé! **=======");
 	}
 	
-	/* Esse método ler o nome do produto do teclado e retorna esse nome. 
-	 * MUITO parecido com os exemplos das aulas anteriores.
-	 * COMO FAZER? Inicie uma string, leia do teclado e retorne essa string lida.
-	 */ 
+	
 	private static String lerProduto(){
 		System.out.println("Por favor, digite o nome do produto");
-		// aqui você adiciona o código que está faltando (leia o como fazer?)
-		return ""; // essa linha será editada por você
+		String retorno = sc.next();
+		return retorno; // essa linha será editada por você
 	}
 	
-	/* Esse método ler um preço (Integer) do teclado e retorna essa preço. 
-	 * MUITO parecido com os exemplos das aulas anteriores.
-	 * COMO FAZER? Inicie um Integer, leia do teclado e retorne esse Integer lido.
-	 */ 
+	
 	private static Integer lerPrecoDoProduto(){
 		System.out.println("Por favor, digite o preço do produto");
 		// aqui você adiciona o código que está faltando (leia o como fazer?)
-		return 10; // essa linha será editada por você
+		Integer preco = sc.nextInt();
+		return preco; // essa linha será editada por você
 	}
 	
 	// Esse método adiciona o produto recebido como parâmetro. Já está feito pra vcs :)
@@ -100,7 +92,12 @@ public class SistemaPadariaZe{
 	 */ 
 	private static void venderProduto(String produtoASerVendido) {
 		// aqui você adiciona o código que está faltando (leia o como fazer?)
-		
+		if (produtos.contains(produtoASerVendido)){
+			produtos.remove(produtoASerVendido);
+		}
+		else {
+			System.out.println("Produto não cadastrado");
+		}
 	}
 
 }
