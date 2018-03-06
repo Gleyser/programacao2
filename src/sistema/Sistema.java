@@ -37,7 +37,7 @@ public class Sistema {
 	
 	public void cadastrarPedido(String produto, String data, String horario, String cpf){
 		Funcionario funcAtual = this.funcionarioAtual;
-		Funcionario funcEntregador = new Funcionario("Jos�", "1234");
+		Funcionario funcEntregador = new Funcionario("José", "1234");
 		Cliente cliente = recuperaCliente(cpf);
 		Pedido pedido = new Pedido(produto, data, horario, funcEntregador, funcAtual, cliente);
 	}
@@ -48,6 +48,7 @@ public class Sistema {
 				return cliente;
 			}
 		}
+		// em breve vamos aprender MAP e Exceções para não ter que usar isso aqui (é feio)
 		System.out.println("Cliente nao localizado");
 		return null;
 	}
