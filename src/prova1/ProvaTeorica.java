@@ -10,14 +10,14 @@ public class ProvaTeorica {
 		boolean morte = false;
 		int vida, dano;
 		System.out.println("o nick do invocador eh: " + nick);
-		vida = 25;
+		vida = 75;
 		int forca = vida/5;		
 		dano  = scan.nextInt();
-		if (dano > vida){
+		if (dano >= vida){
 			vida = vida - dano;
 			if (dano > forca + vida){
 				morte = true;
-				forca = forca + 10;
+				forca = forca + 20;
 			} else {
 				morte = false;
 				forca = forca - 10;
