@@ -8,7 +8,7 @@ public class Sistema {
 	private static ArrayList<Livro> livros = new ArrayList<Livro>();
 	private static double totalDeVendas = 0;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		boasVindas();		
 		int opcao = lerOpcao();		
 		while (opcao!= 4){
@@ -41,7 +41,7 @@ public class Sistema {
 		
 	}
 
-	private static void venderLivro() {
+	private static void venderLivro() throws Exception {
 		System.out.println("= = = = Venda de Livros = = = = ");
 		System.out.println("Digite o nome do livro:");
 		String nome = sc.next();
@@ -61,13 +61,14 @@ public class Sistema {
 		
 	}
 	
-	private static Livro recuperaLivro(String nome) {
+	
+	private static Livro recuperaLivro(String nome) throws Exception {
 		for (Livro livro: livros){
 			if (livro.getNome().equals(nome)){
 				return livro;
 			}
 		}
-		return null;
+		throw new Exception("Livro não cadastrado");
 	}
 
 	private static boolean livroEstaCadastrado(String nome){
