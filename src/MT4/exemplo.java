@@ -16,13 +16,13 @@ public class exemplo {
 	}
 		
 
-	// Para isso funcionar você deve criar a classe Aluno no mesmo pacote que essa classe.
-	private static Aluno criaAluno(String nome, int idade){
+	// Para isso funcionar você deve criar a classe Pessoa no mesmo pacote que essa classe.
+	private static Aluno criaPessoa(String nome, int idade){
 		Pessoa pessoa = new Pessoa(nome, idade);
 		return pessoa;
 	}
 	
-	// IMPLEMENTE ESSE MÉTODO. Dica: use o método criaAluno! DUAS linhas resolve isso!
+	// IMPLEMENTE ESSE MÉTODO. Dica: use o método criaPessoa! DUAS linhas resolve isso!
 	private static void cadastrarPessoa(String nome, int idade){
 		
 		
