@@ -1,0 +1,41 @@
+package sistema;
+import java.util.ArrayList;
+public class exemplo {
+	private static ArrayList<String> nomes = new ArrayList<String>();
+	public static void main(String[] args) {
+		
+	}
+	
+	private String lerNomeDoTeclado(){
+		
+	}
+	
+	private void adicionaNomeNaLista(String nome){
+		
+	}
+	
+	private boolean verificaSeNomeEstaNalista(String nome){
+		
+	}
+	
+	private void removeNomeDaLista(String nome){
+		
+	}
+	
+	private void removeNomeDaLista(int indice){
+		
+	}
+	
+	// Imprime os nomes da lista um abaixo do outro.
+	private void ImprimeNomesDaLista(){
+		
+	}
+	private String retornaOPrimeiroDaLista(){
+		
+	}
+
+	private String retornaOUltimoDaListaa(){
+	
+}
+
+}
